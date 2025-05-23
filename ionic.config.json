@@ -1,0 +1,7 @@
+{
+  "name": "FileViewerApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

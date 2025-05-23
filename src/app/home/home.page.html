@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PDF File Viewer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refreshFiles($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item *ngFor="let file of files">
+      <ion-label>{{ file }}</ion-label>
+      <ion-button color="primary" (click)="openFile(file)">Open</ion-button>
+      <ion-button color="success" (click)="signPdf(file)">Sign</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
